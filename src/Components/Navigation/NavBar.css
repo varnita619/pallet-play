@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap');
+.nav-bar {
+  background-color: var(--primary-color);
+  border-bottom: 0.4rem solid var(--secondary-color);
+}
+
+.heading-font{
+  font-family: 'EB Garamond', serif;
+}
+
+.heading {
+  color: var(--secondary-color);
+  font-size: 2.6rem;
+}
+
+.sub-heading {
+  font-size: 2.5rem;
+  color: var(--white-color);
+  margin-left: 0.6rem;
+}
+
+.btn {
+  background-color: var(--secondary-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.search{
+  border: 2px solid var(--secondary-color);
+  border-radius: .5rem;
+}
+
+.search-input[type="text"] {
+  padding: 10px;
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  float: left;
+  width: 80%;
+}
+
+.search-btn {
+  float: left;
+  width: 20%;
+  padding: 9px;
+  background: transparent;
+  color: var(--white-color);
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background: var(--hover-color);
+}
