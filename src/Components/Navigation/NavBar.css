@@ -33,21 +33,22 @@
 }
 
 .search-input[type="text"] {
-  padding: 10px;
-  font-size: 17px;
+  padding: .7rem;
+  font-size: 1rem;
   background: transparent;
   border: none;
   float: left;
-  width: 80%;
+  width: 12rem;
+  color: var(--white-color);
 }
 
 .search-btn {
   float: left;
-  width: 20%;
-  padding: 9px;
+  width: 3rem;
+  padding: .6rem;
   background: transparent;
   color: var(--white-color);
-  font-size: 17px;
+  font-size: 1.1rem;
   border: none;
   cursor: pointer;
 }

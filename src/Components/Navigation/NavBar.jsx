@@ -12,7 +12,7 @@ const NavBar = () => {
             <button className="nav-bar_action-item">
               <i className="fas fa-bars"></i>
             </button>
-            <span className="nav-bar_heading heading heading-font">Pallet </span>{" "}
+            <span className="nav-bar_heading heading heading-font">Pallet </span>
             <span className="sub-heading heading-font"> Play</span>
           </div>
 
