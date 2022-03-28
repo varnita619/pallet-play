@@ -35,8 +35,8 @@
   background-color: var(--secondary-color);
   color: white;
   width: 10rem;
-  font-size: 16px;
-  padding: 16px 32px;
+  font-size: 1.1rem;
+  padding: 1rem 1.6rem;
   margin-left: 18rem;
   cursor: pointer;
 }
