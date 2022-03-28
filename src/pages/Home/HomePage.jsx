@@ -14,8 +14,8 @@ const HomePage = () => {
 
         <div className="middle">
           <p className="middle-para">
-            Welcome to Pallet Play. Browse your favorite videos and learn
-            guitar from basic to advance.
+            Welcome to Pallet Play. Browse your favorite videos and learn guitar
+            from basic to advance.
           </p>
           <div className="text">Explore Now</div>
         </div>
