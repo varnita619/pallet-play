@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap');
 .nav-bar {
   background-color: var(--primary-color);
-  border-bottom: 0.4rem solid var(--secondary-color);
+  border-bottom: 0.2rem solid var(--secondary-color);
 }
 
 .heading-font{
@@ -38,7 +38,7 @@
   background: transparent;
   border: none;
   float: left;
-  width: 12rem;
+  width: 22rem;
   color: var(--white-color);
 }
 

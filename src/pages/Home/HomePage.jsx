@@ -17,7 +17,9 @@ const HomePage = () => {
             Welcome to Pallet Play. Browse your favorite videos and learn guitar
             from basic to advance.
           </p>
-          <div className="text">Explore Now</div>
+          <div className="text">
+            <Link to="/videolisting">Explore Now</Link>
+          </div>
         </div>
       </div>
     </div>

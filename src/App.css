@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 .App {
   text-align: center;
   background-color: var(--primary-color);
-  font-family: "Fjalla One", sans-serif;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .App-logo {
