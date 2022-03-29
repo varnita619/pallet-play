@@ -1,0 +1,48 @@
+.side-bar {
+  width: 50rem;
+  height: 100vh;
+  margin-left: 4rem;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+  border-right: 0.2rem solid var(--secondary-color);
+}
+
+.side-list{
+  text-align: start;
+}
+
+.list-topic {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  color: var(--white-color);
+  font-size: 1rem;
+}
+
+.active {
+  border-bottom: .2rem solid var(--secondary-color);
+}
+
+.not-active {
+  border: none;
+}
+
+/* media queries */
+
+@media screen and (max-width: 967px) {
+  .side-bar {
+    display: none;
+  }
+
+  .component-content-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .component {
+    padding: 0;
+    margin: 0;
+  }
+}

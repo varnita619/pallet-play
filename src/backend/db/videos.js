@@ -6,16 +6,98 @@
 export const videos = [
   {
     _id: "Wo5dMEP_BbI",
-    title: "Awesome Video about Coding",
+    title: "Marty Music",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+      "Beginner electric guitar lesson",
+    creator: "Soham Shah",
+  },
+  {
+    _id: "Wo5dMEP_BbI",
+    title: "Marty Music",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    description:
+      "Beginner electric guitar lesson",
+    creator: "Soham Shah",
+  },
+  {
+    _id: "Wo5dMEP_BbI",
+    title: "Marty Music",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    description:
+      "Beginner electric guitar lesson",
+    creator: "Soham Shah",
+  },
+  {
+    _id: "Wo5dMEP_BbI",
+    title: "Marty Music",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    description:
+      "Beginner electric guitar lesson",
+    creator: "Soham Shah",
+  },
+  {
+    _id: "Wo5dMEP_BbI",
+    title: "Marty Music",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    description:
+      "Beginner electric guitar lesson",
+    creator: "Soham Shah",
+  },
+  {
+    _id: "Wo5dMEP_BbI",
+    title: "Marty Music",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    description:
+      "Beginner electric guitar lesson",
+    creator: "Soham Shah",
+  },
+  {
+    _id: "Wo5dMEP_BbI",
+    title: "Marty Music",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    description:
+      "Beginner electric guitar lesson",
+    creator: "Soham Shah",
+  },
+  {
+    _id: "Wo5dMEP_BbI",
+    title: "Marty Music",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    description:
+      "Beginner electric guitar lesson",
+    creator: "Soham Shah",
+  },
+  {
+    _id: "Wo5dMEP_BbI",
+    title: "Marty Music",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    description:
+      "Beginner electric guitar lesson",
+    creator: "Soham Shah",
+  },
+  {
+    _id: "Wo5dMEP_BbI",
+    title: "Marty Music",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    description:
+      "Beginner electric guitar lesson",
+    creator: "Soham Shah",
+  },
+  {
+    _id: "Wo5dMEP_BbI",
+    title: "Marty Music",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    description:
+      "Beginner electric guitar lesson",
     creator: "Soham Shah",
   },
   {
     _id: "F_Riqjdh2oM",
-    title: "Neural Networks from Scratch - P.1 Intro and Neuron Code",
+    title: "Marty Music",
     creator: "Sentdex",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+      "Beginner electric guitar lesson",
   },
 ];

@@ -1,0 +1,29 @@
+.shadow-card{
+    background-color: transparent;
+    color: var(--white-color);
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: start;
+    width: max-content;
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+}
+
+.twin-btn{
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: end;
+    padding: .5rem;
+}
+
+.like-btn{
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: end;
+    background: transparent;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    border: none;
+    margin-right: 1rem;
+
+}
