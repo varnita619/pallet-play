@@ -23,14 +23,13 @@ function Login() {
           } = await axios.post("/api/auth/login", formData);
           localStorage.setItem("login-Token", encodedToken);
           localStorage.setItem("user", JSON.stringify(foundUser));
-
           if (status === 200) {
             setToken(encodedToken);
             setUser(foundUser);
 
-            if (encodedToken) {
-              navigate("/videolisting");
-            }
+          if (encodedToken) {
+            navigate("/videolisting");
+          }
           }
         } catch (error) {
           console.log(error);
@@ -42,7 +41,7 @@ function Login() {
   };
   return (
     <>
-      <form onClick={(e) => loginFormHandler(e)}>
+      <form  onClick={(e) => loginFormHandler(e)}>
         <div className="auth-container">
           <div className="signup-container">
             <h1>Login</h1>
@@ -93,7 +92,11 @@ function Login() {
             </label>
 
             <div className="clearfix">
-              <button type="submit" className="signupbtn anchor-btn">
+              <button
+                type="submit"
+                className="signupbtn anchor-btn"
+               
+              >
                 Login
               </button>
             </div>

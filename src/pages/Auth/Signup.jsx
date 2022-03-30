@@ -15,13 +15,13 @@ function Signup() {
   const signUpFormHandler = (e) => {
     e.preventDefault();
     (async () => {
-      console.log(formData);
+
       try {
         const {
           status,
           data: { encodedToken },
         } = await axios.post("/api/auth/signup", formData);
-        localStorage.setItem("Signup-Token", encodedToken);
+        // localStorage.setItem("Signup-Token", encodedToken);
 
         if (status === 201) {
           setFormData({ firstName: "", lastName: "", email: "", password: "" });
