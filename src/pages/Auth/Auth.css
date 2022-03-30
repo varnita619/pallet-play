@@ -1,0 +1,104 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  color: var(--white-color);
+}
+
+button:hover {
+  opacity: 1;
+}
+
+.login-button {
+  background-color: var(--secondary-color);
+  margin: 1rem 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.anchor-btn {
+  text-decoration: none;
+  color: var(--white-color);
+  background-color: var(--secondary-color);
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.signup-container {
+  padding: 1rem;
+  width: 25rem;
+  border: 1px solid var(--secondary-color);
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.1rem;
+  margin-bottom: .5rem;
+  background: transparent;
+  color: var(--white-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+}
+
+.terms-condition {
+  color: var(--secondary-color);
+}
+
+.clearfix {
+  display: flex;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+.signupbtn {
+  background-color: var(--secondary-color);
+  margin: 1rem 0;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0.9;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.anchor-btn {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.remember-me-checkbox {
+  margin-bottom: 0.8rem;
+}
+hr {
+  border: 1px solid var(--white-color);
+  margin-bottom: 1.3rem;
+}
+
+.have-account {
+  text-align: center;
+}
+
+.have-account > a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .signupbtn {
+    width: 80%;
+  }
+}
