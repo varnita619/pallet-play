@@ -13,7 +13,7 @@ function SideBar() {
   return (
     <>
       <div className="side-bar">
-          <Link className={navLink} to='/videolisting'>
+          <Link to='/videolisting'>
         <div className="side-list">
           <h4 className="list-topic"> <AiFillHome /> Home</h4>
         </div>
