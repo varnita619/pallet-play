@@ -1,6 +1,6 @@
 import React from "react";
 import "./SideBar.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import {AiFillHome, AiFillLike} from "react-icons/ai";
 import {FaVideo, FaHistory} from "react-icons/fa";
 import {RiPlayListAddFill} from "react-icons/ri";
@@ -13,11 +13,11 @@ function SideBar() {
   return (
     <>
       <div className="side-bar">
-          <NavLink className={navLink} to='/videolisting'>
+          <Link to='/videolisting'>
         <div className="side-list">
           <h4 className="list-topic"> <AiFillHome /> Home</h4>
         </div>
-        </NavLink>
+        </Link>
         <div className="side-list">
           <h4 className="list-topic"> <FaVideo /> Explore</h4>
         </div>

@@ -4,7 +4,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     text-align: start;
-    width: max-content;
+    /* width: max-content; */
     margin-right: 3rem;
     margin-bottom: 2rem;
 }

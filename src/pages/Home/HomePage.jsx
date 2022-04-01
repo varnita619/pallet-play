@@ -18,7 +18,7 @@ const HomePage = () => {
             from basic to advance.
           </p>
           <div className="text">
-            <Link to="/videolisting">Explore Now</Link>
+            <Link to="/videolisting" className="link">Explore Now</Link>
           </div>
         </div>
       </div>

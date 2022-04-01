@@ -20,17 +20,15 @@ const VideoContextProvider = ({ children }) => {
           type: "ON_SUCCESS",
           payload: videos,
         });
-        console.log(videos);
       } catch (error) {
         console.log(error);
       }
     })();
   }, []);
-//   console.log(videos);
 
   const [state, dispatch] = useReducer(videoReducer, initialState);
   const { videos } = state;
-//   console.log(videos);
+
   return (
     <VideoContext.Provider value={{ state, dispatch, videos }}>
       {children}

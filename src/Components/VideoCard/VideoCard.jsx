@@ -5,11 +5,12 @@ import { MdWatchLater } from "react-icons/md";
 
 const VideoCard = ({ eachVideo }) => {
   const { _id, title, description, img} = eachVideo;
+ const thumbnail = (videoId) => `https://img.youtube.com/vi/${_id}/sddefault.jpg`;
   return (
     <div className="shadow-card">
       <div className="card-image">
         <img
-          src={img}
+          src= {thumbnail()}
           alt="card-image"
         />
       </div>

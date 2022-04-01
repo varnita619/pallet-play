@@ -8,3 +8,8 @@
   --shadow-color: #6e6e6e71;
   --black-color: #000000;
 }
+
+.link{
+  color: var(--white-color);
+  text-decoration: none;
+}
