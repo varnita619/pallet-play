@@ -1,11 +1,11 @@
 .App {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-body{
+body {
   background-color: var(--primary-color);
 }
-
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -26,4 +26,3 @@ body{
 .App-link {
   color: #61dafb;
 }
-

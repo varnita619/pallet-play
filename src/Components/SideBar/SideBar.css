@@ -1,19 +1,18 @@
-/* .sidebar-container{
-  display: flex;
-  width: 17rem;
-} */
 .main-div{
-  width: 15rem;
-  margin: 0 important!;
+  display: flex;
+  border-right: 0.2rem solid var(--secondary-color);
 }
 
 .side-bar {
   margin-left: 2rem;
   position: sticky;
-  top: 0;
+  top: 8rem;
   bottom: 0;
   cursor: pointer;
-  border-right: 0.2rem solid var(--secondary-color);
+  height: 94vh;
+  overflow-y: auto;
+  width: 11rem;
+
 }
 
 .side-list{

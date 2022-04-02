@@ -1,12 +1,12 @@
 .main-container {
-  margin-left: 4rem;
+  display: flex;
 }
 
 .videos-wrapper {
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
-  margin-left: 15rem;
+  justify-content: center;
 }
 
 @media screen and (max-width: 430px) {

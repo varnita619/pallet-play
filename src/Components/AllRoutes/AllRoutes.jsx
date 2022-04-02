@@ -7,21 +7,11 @@ import { Login } from "../../pages/Auth/Login";
 import { Logout } from "../../pages/Auth/Logout";
 import { Signup } from "../../pages/Auth/Signup";
 import { LikedVideos } from "../../pages/LikedVideos/LikedVideos";
-import { SideBar } from "../SideBar/SideBar";
 
 const AllRoutes = () => {
-  const { pathname } = useLocation();
-  const Sidebar = () => {
-    if (pathname !== "/login" && pathname !== "/" && pathname !== "/signup" && pathname !== "/logout") {
-      return <SideBar />;
-    }
-    return null;
-  };
-
   return (
     <div>
       <NavBar />
-      <Sidebar />
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/videolisting" element={<VideoListing />}></Route>

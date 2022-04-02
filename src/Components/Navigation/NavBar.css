@@ -1,11 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap");
 .nav-bar {
   background-color: var(--primary-color);
-  border-bottom: 0.2rem solid var(--secondary-color);
+  height: 6rem;
 }
 
-.heading-font{
-  font-family: 'EB Garamond', serif;
+.nav-bar_row {
+  background-color: var(--primary-color);
+  z-index: 1;
+  position: fixed;
+  border-bottom: 0.2rem solid var(--secondary-color);
+  width: 100%;
+}
+.heading-font {
+  font-family: "EB Garamond", serif;
 }
 
 .heading {
@@ -27,13 +34,13 @@
   box-sizing: border-box;
 }
 
-.search{
+.search {
   border: 2px solid var(--secondary-color);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .search-input[type="text"] {
-  padding: .7rem;
+  padding: 0.7rem;
   font-size: 1rem;
   background: transparent;
   border: none;
@@ -45,7 +52,7 @@
 .search-btn {
   float: left;
   width: 3rem;
-  padding: .8rem;
+  padding: 0.8rem;
   background: transparent;
   color: var(--white-color);
   font-size: 1.1rem;
