@@ -1,0 +1,13 @@
+.liked-videos-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.starting-text{
+    color: var(--white-color);
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 10rem;
+}

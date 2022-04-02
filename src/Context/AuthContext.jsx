@@ -6,14 +6,14 @@ const AuthContext = createContext();
 
 const AuthContextProvider = ({ children }) => {
   const getToken = localStorage.getItem("login-token");
-  const getUserDetails = localStorage.getItem("user");
+  const getUserDetails = JSON.parse(localStorage.getItem("user"));
 
   const [token, setToken] = useState(getToken || "");
   const [user, setUser] = useState(getUserDetails || "");
 
   useEffect(() => {
     setToken(getToken);
-    setToken(getUserDetails);
+    setUser(getUserDetails);
   }, []);
 
   const userLogout = () => {

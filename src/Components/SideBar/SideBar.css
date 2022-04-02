@@ -1,7 +1,14 @@
+/* .sidebar-container{
+  display: flex;
+  width: 17rem;
+} */
+.main-div{
+  width: 15rem;
+  margin: 0 important!;
+}
+
 .side-bar {
-  width: 50rem;
-  height: 100vh;
-  margin-left: 4rem;
+  margin-left: 2rem;
   position: sticky;
   top: 0;
   bottom: 0;
