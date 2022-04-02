@@ -15,10 +15,13 @@ const VideoCard = ({ eachVideo }) => {
   const { token } = useAuthContext();
   const navigate = useNavigate();
 
+  const singleVideoHandler = () => {
+    navigate(`/video/${_id}`)
+  }
 
   return (
     <div className="shadow-card">
-      <div className="card-image">
+      <div className="card-image" onClick={() => singleVideoHandler()}>
         <img src={thumbnail} alt="card-image" />
       </div>
 
