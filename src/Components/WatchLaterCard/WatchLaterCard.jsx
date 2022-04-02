@@ -3,17 +3,16 @@ import { AiFillLike } from "react-icons/ai";
 import { MdDelete } from "react-icons/md";
 import { useLikedVideoContext } from "../../Context/LikedVideosContext";
 import { useAuthContext } from "../../Context/AuthContext";
-import {  useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import { useWatchLaterContext } from "../../Context/WatchLaterContext";
 
 const WatchLaterCard = ({ eachVideo }) => {
   const { title, description, thumbnail } = eachVideo;
 
   const { addToLikes } = useLikedVideoContext();
-  const {removeFromWatchLater} = useWatchLaterContext();
+  const { removeFromWatchLater } = useWatchLaterContext();
   const { token } = useAuthContext();
   const navigate = useNavigate();
-
 
   return (
     <div className="shadow-card">
@@ -35,9 +34,12 @@ const WatchLaterCard = ({ eachVideo }) => {
         >
           <AiFillLike />
         </button>
-        <button className="like-btn"  onClick={() => {
+        <button
+          className="like-btn"
+          onClick={() => {
             token ? removeFromWatchLater(eachVideo) : navigate("/login");
-          }}>
+          }}
+        >
           <MdDelete />
         </button>
       </div>

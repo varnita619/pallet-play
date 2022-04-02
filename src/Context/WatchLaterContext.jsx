@@ -6,7 +6,7 @@ import { useAuthContext } from "../Context/AuthContext";
 const WatchLaterContext = createContext();
 
 const initialState = {
-    watchLater: [],
+  watchLater: [],
 };
 
 const WatchLaterContextProvider = ({ children }) => {
@@ -58,12 +58,12 @@ const WatchLaterContextProvider = ({ children }) => {
   };
 
   const removeFromWatchLater = async (videoId) => {
-    if (watchLater.find((eachVideo) => eachVideo._id === videoId)) {
+    if (watchLater.find((eachVideo) => eachVideo._id === videoId._id)) {
       try {
         const {
           status,
           data: { watchLater },
-        } = await axios.delete(`/api/user/watchLater/${videoId}`, {
+        } = await axios.delete(`/api/user/watchLater/${videoId._id}`, {
           headers: { authorization: token },
         });
         if (status === 200) {
@@ -71,7 +71,6 @@ const WatchLaterContextProvider = ({ children }) => {
             type: "REMOVE_FROM_WATCH_LATER",
             payload: watchLater,
           });
-          console.log("removed", watchLater)
         }
       } catch (error) {
         console.log(error);
@@ -81,7 +80,7 @@ const WatchLaterContextProvider = ({ children }) => {
 
   useEffect(() => {
     getWatchLaterData();
-  },[]);
+  }, []);
 
   return (
     <WatchLaterContext.Provider
