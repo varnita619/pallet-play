@@ -14,18 +14,17 @@ function SingleVideo() {
   const { addToWatchLater } = useWatchLaterContext();
   const { token } = useAuthContext();
   const navigate = useNavigate();
-  const videoId = useParams();
+  const {videoId} = useParams();
 
   const {
-    state: { videos },
+     state: {videos}
   } = useVideoContext();
-  const video = videos.find((eachVideo) => eachVideo._id === videoId);
-  console.log(video)
+
+  const video = videos.find((eachVideo) => eachVideo._id === videoId)
 
   return (
     <div className="main-container">
       <SideBar />
-      {/* {videos.map((eachVideo) => ( */}
       <main className="single-video-wrapper">
         <div className="video-player">
           <VideoIframe videoId = {video?._id} />
@@ -58,7 +57,6 @@ function SingleVideo() {
           </button>
         </div>
       </main>
-      {/* ))} */}
     </div>
   );
 }
