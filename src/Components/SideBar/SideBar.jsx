@@ -1,6 +1,6 @@
 import React from "react";
 import "./SideBar.css";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AiFillHome, AiFillLike } from "react-icons/ai";
 import { FaVideo, FaHistory } from "react-icons/fa";
 import { RiPlayListAddFill } from "react-icons/ri";
@@ -11,11 +11,14 @@ function SideBar() {
   const navLink = ({ activeLink }) => ({
     borderBottom: activeLink ? '.2rem solid var(--secondary-color)' : '',
   });
+  const getActiveStyle = ({ isActive }) => ({
+    backgroundColor: isActive ? "red" : ""
+  })
   const { token } = useAuthContext();
   return (
     <div className="main-div">
       <div className="side-bar">
-        <NavLink to="/" className={navLink}>
+        <NavLink to="/" style={navLink}>
           <div className="side-list">
             <h4 className="list-topic">
               {" "}
@@ -24,7 +27,7 @@ function SideBar() {
           </div>
         </NavLink>
 
-        <NavLink to="/videolisting" className={navLink}>
+        <NavLink to="/videolisting" style={getActiveStyle}>
           <div className="side-list">
             <h4 className="list-topic">
               {" "}
@@ -40,7 +43,7 @@ function SideBar() {
           </h4>
         </div>
 
-        <NavLink to="/likedvideos" className={navLink}>
+        <NavLink to="/likedvideos" className={navLink} style={getActiveStyle}>
           <div className="side-list">
             <h4 className="list-topic">
               <AiFillLike /> Liked Videos
