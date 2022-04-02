@@ -2,6 +2,7 @@ import axios from "axios";
 import { createContext, useContext, useReducer, useEffect } from "react";
 import { watchLaterReducer } from "../Reducer/WatchLaterReducer";
 import { useAuthContext } from "../Context/AuthContext";
+import { toast } from "react-hot-toast";
 
 const WatchLaterContext = createContext();
 
@@ -26,13 +27,17 @@ const WatchLaterContextProvider = ({ children }) => {
         dispatch({ type: "GET_WATCH_LATER", payload: watchLater });
       }
     } catch (error) {
-      console.log(error);
+      toast.error("Error occurred While fetching video from watchLater", {
+        position: "bottom-left",
+      });
     }
   };
 
   const addToWatchLater = async (video) => {
     if (watchLater.find((eachVideo) => eachVideo._id === video._id)) {
-      removeFromWatchLater(video._id);
+      toast.error("Video already Added to watch Later!", {
+        position: "bottom-left",
+      });
     } else {
       try {
         const {
@@ -46,13 +51,16 @@ const WatchLaterContextProvider = ({ children }) => {
           }
         );
         if (status === 201) {
+          toast.success("Saved to Watch Later", { position: "bottom-left" });
           dispatch({
             type: "ADD_TO_WATCH_LATER",
             payload: watchLater,
           });
         }
       } catch (error) {
-        console.log(error);
+        toast.error("Error occurred in adding to Watch Later videos", {
+          position: "bottom-left",
+        });
       }
     }
   };
@@ -67,13 +75,16 @@ const WatchLaterContextProvider = ({ children }) => {
           headers: { authorization: token },
         });
         if (status === 200) {
+          toast.success("Removed from Watch Later", {
+            position: "bottom-left",
+          });
           dispatch({
             type: "REMOVE_FROM_WATCH_LATER",
             payload: watchLater,
           });
         }
       } catch (error) {
-        console.log(error);
+        toast.error("Error occured in removing!", { position: "bottom-left" });
       }
     }
   };

@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 import axios from "axios";
 import { videoReducer } from "../Reducer/videoReducer";
+import { toast } from "react-hot-toast";
 
 const VideoContext = createContext();
 
@@ -20,7 +21,7 @@ const VideoContextProvider = ({ children }) => {
           payload: videos,
         });
       } catch (error) {
-        console.log(error);
+        toast.error("Error occurred in fetching videos " , { position: "bottom-left"});
       }
     })();
   }, []);
