@@ -2,19 +2,20 @@
   display: flex;
 }
 
-.products-wrapper {
+.videos-wrapper {
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
-  margin-left: 2rem;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 @media screen and (max-width: 430px) {
-  .products-heading {
+  .videos-heading {
     font-size: 1.2rem;
   }
 
-  .products-wrapper {
+  .videos-wrapper {
     max-width: 21rem;
     height: auto;
   }

@@ -1,12 +1,18 @@
+.main-div{
+  display: flex;
+  border-right: 0.2rem solid var(--secondary-color);
+}
+
 .side-bar {
-  width: 50rem;
-  height: 100vh;
-  margin-left: 4rem;
+  margin-left: 2rem;
   position: sticky;
-  top: 0;
+  top: 8rem;
   bottom: 0;
   cursor: pointer;
-  border-right: 0.2rem solid var(--secondary-color);
+  height: 94vh;
+  overflow-y: auto;
+  width: 11rem;
+
 }
 
 .side-list{

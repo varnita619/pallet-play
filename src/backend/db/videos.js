@@ -3,11 +3,13 @@
  * You can add videos of your wish with different attributes
  * */
 
+import { thumbnail } from "../../Utils/thumbnailGenerator";
+
 export const videos = [
   {
     _id: 'VjAnb2gBFVI',
     title: "Marty Music",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    thumbnail: thumbnail('VjAnb2gBFVI'),
     description:
       "Beginner electric guitar lesson",
     creator: "Soham Shah",
@@ -15,7 +17,7 @@ export const videos = [
   {
     _id: "RY3AvEGKfZ0",
     title: "Marty Music",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    thumbnail: thumbnail('RY3AvEGKfZ0'),
     description:
       "Beginner electric guitar lesson",
     creator: "Soham Shah",
@@ -23,7 +25,7 @@ export const videos = [
   {
     _id: "3daYYn4AT3w",
     title: "Marty Music",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    thumbnail: thumbnail('3daYYn4AT3w'),
     description:
       "Beginner electric guitar lesson",
     creator: "Soham Shah",
@@ -31,7 +33,7 @@ export const videos = [
   {
     _id: "XctHeNixJDQ",
     title: "Marty Music",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    thumbnail: thumbnail('XctHeNixJDQ'),
     description:
       "Beginner electric guitar lesson",
     creator: "Soham Shah",
@@ -39,7 +41,7 @@ export const videos = [
   {
     _id: "7F0YVSBOBy8",
     title: "Marty Music",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    thumbnail: thumbnail('7F0YVSBOBy8'),
     description:
       "Beginner electric guitar lesson",
     creator: "Soham Shah",
@@ -47,7 +49,7 @@ export const videos = [
   {
     _id: "cdkCB6czek8",
     title: "Marty Music",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    thumbnail: thumbnail('cdkCB6czek8'),
     description:
       "Beginner electric guitar lesson",
     creator: "Soham Shah",
@@ -55,7 +57,7 @@ export const videos = [
   {
     _id: "Cda88AP_hjc",
     title: "Marty Music",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    thumbnail: thumbnail('Cda88AP_hjc'),
     description:
       "Beginner electric guitar lesson",
     creator: "Soham Shah",
@@ -63,7 +65,7 @@ export const videos = [
   {
     _id: "SgXPhpDlZII",
     title: "Marty Music",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    thumbnail: thumbnail('SgXPhpDlZII'),
     description:
       "Beginner electric guitar lesson",
     creator: "Soham Shah",
@@ -71,7 +73,7 @@ export const videos = [
   {
     _id: "w4a2ge9N31E",
     title: "Marty Music",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    thumbnail: thumbnail('w4a2ge9N31E'),
     description:
       "Beginner electric guitar lesson",
     creator: "Soham Shah",
@@ -79,15 +81,16 @@ export const videos = [
   {
     _id: "JiAD1-BR6FQ",
     title: "Marty Music",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzzsqdPhKoG9HRPkR3xeWkKNhhQCHmbZupn82TZLKKKsd9TmRPS9oTwiKyfkFfKdZ6nbE&usqp=CAU",
+    thumbnail: thumbnail('JiAD1-BR6FQ'),
     description:
       "Beginner electric guitar lesson",
-    creator: "Soham Shah",
+    creator: "Markiee",
   },
   {
     _id: "u2X7RLpsPBs",
     title: "Marty Music",
     creator: "Sentdex",
+    thumbnail: thumbnail('u2X7RLpsPBs'),
     description:
       "Beginner electric guitar lesson",
   },
@@ -95,6 +98,7 @@ export const videos = [
     _id: "R4sB_DSa8YQ",
     title: "Marty Music",
     creator: "Sentdex",
+    thumbnail: thumbnail('R4sB_DSa8YQ'),
     description:
       "Beginner electric guitar lesson",
   },

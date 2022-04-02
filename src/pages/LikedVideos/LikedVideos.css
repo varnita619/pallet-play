@@ -1,0 +1,16 @@
+.likes-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+}
+
+.starting-text {
+  color: var(--white-color);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.shadow-card {
+  height: fit-content;
+}
