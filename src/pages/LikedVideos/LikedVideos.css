@@ -1,17 +1,17 @@
-.liked-videos-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 4rem;
+.likes-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 1rem;
 }
 
-.starting-text{
-    color: var(--white-color);
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: 10rem;
+.starting-text {
+  color: var(--white-color);
+  text-align: center;
+  font-size: 1.5rem;
 }
 
-.shadow-card{
-    height: fit-content;
+.shadow-card {
+  height: fit-content;
 }

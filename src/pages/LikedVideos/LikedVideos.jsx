@@ -13,7 +13,7 @@ const LikedVideos = () => {
   return (
     <div className="main-container">
       <SideBar />
-      <div className="videos-wrapper">
+      <div className="likes-wrapper">
         {likes?.length === 0 ? (
           <div className="starting-text">You haven't liked any video yet.</div>
         ) : (
