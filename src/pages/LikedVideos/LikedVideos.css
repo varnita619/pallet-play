@@ -1,9 +1,8 @@
 .likes-wrapper {
   display: flex;
   justify-content: center;
-  padding: 1rem;
+  padding: 3rem;
   text-align: center;
-  margin-top: 1rem;
 }
 
 .starting-text {
