@@ -7,6 +7,7 @@ import { Login } from "../../pages/Auth/Login";
 import { Logout } from "../../pages/Auth/Logout";
 import { Signup } from "../../pages/Auth/Signup";
 import { LikedVideos } from "../../pages/LikedVideos/LikedVideos";
+import {WatchLater} from "../../pages/WatchLater/WatchLater";
 
 const AllRoutes = () => {
   return (
@@ -19,6 +20,7 @@ const AllRoutes = () => {
         <Route path="/logout" element={<Logout />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/likedvideos" element={<LikedVideos />}></Route>
+        <Route path="/watchlater" element={<WatchLater />}></Route>
       </Routes>
     </div>
   );

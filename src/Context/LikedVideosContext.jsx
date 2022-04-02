@@ -33,7 +33,6 @@ const LikedVideosContextProvider = ({ children }) => {
   const addToLikes = async (video) => {
     if (likes.find((eachVideo) => eachVideo._id === video._id)) {
       removeFromLikes(video._id);
-      console.log("removed");
     } else {
       try {
         const {
@@ -81,7 +80,7 @@ const LikedVideosContextProvider = ({ children }) => {
 
   useEffect(() => {
     getLikeData();
-  });
+  },[]);
 
   return (
     <LikedVideosContext.Provider

@@ -9,7 +9,7 @@ import { useAuthContext } from "../../Context/AuthContext";
 
 function SideBar() {
   const navLink = ({ activeLink }) => ({
-    className: activeLink ? `active` : `not-active`,
+    borderBottom: activeLink ? '.2rem solid var(--secondary-color)' : '',
   });
   const { token } = useAuthContext();
   return (
@@ -47,11 +47,15 @@ function SideBar() {
             </h4>
           </div>
         </NavLink>
+
+        <NavLink to="/watchlater" className={navLink}>
         <div className="side-list">
           <h4 className="list-topic">
             <MdWatchLater /> Watch Later
           </h4>
         </div>
+        </NavLink>
+
         <div className="side-list">
           <h4 className="list-topic">
             <FaHistory /> History
