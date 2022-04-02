@@ -1,6 +1,7 @@
 import { createContext, useContext } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import { toast } from "react-hot-toast";
 
 const AuthContext = createContext();
 
@@ -17,6 +18,7 @@ const AuthContextProvider = ({ children }) => {
   }, []);
 
   const userLogout = () => {
+    toast.success('Logged out', {position: 'bottom-left'})
     setToken("");
     setUser("");
     localStorage.removeItem("login-token");

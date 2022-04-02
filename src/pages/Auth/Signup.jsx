@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Auth.css";
 import { useState } from "react";
 import axios from "axios";
+import { toast } from "react-hot-toast";
+
 function Signup() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -21,16 +23,16 @@ function Signup() {
           status,
           data: { encodedToken },
         } = await axios.post("/api/auth/signup", formData);
-        // localStorage.setItem("Signup-Token", encodedToken);
 
         if (status === 201) {
           setFormData({ firstName: "", lastName: "", email: "", password: "" });
           if (encodedToken) {
             navigate("/login");
+            toast.success("Signed Up Successfully", { position: "bottom-left" });
           }
         }
       } catch (error) {
-        console.log(error);
+        toast.error("User already exist.", { position: "bottom-left" });
       }
     })();
   };
