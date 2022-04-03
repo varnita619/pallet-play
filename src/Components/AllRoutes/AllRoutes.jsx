@@ -10,6 +10,7 @@ import {
   Logout,
   Signup,
   WatchLater,
+  History,
 } from "../../pages/index";
 import { NavBar } from "../../Components/index";
 
@@ -26,6 +27,7 @@ const AllRoutes = () => {
         <Route path="/likedvideos" element={<LikedVideos />}></Route>
         <Route path="/watchlater" element={<WatchLater />}></Route>
         <Route path="/video/:videoId" element={<SingleVideo />}></Route>
+        <Route path="/history" element={<History />}></Route>
       </Routes>
 
       <Toaster />
