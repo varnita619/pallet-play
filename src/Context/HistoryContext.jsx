@@ -79,7 +79,6 @@ const HistoryContextProvider = ({ children }) => {
       }
     } catch (error) {
       toast.error("Error occured in removing!", { position: "bottom-left" });
-      console.log(error)
     }
   }
   };

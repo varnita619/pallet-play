@@ -1,7 +1,8 @@
 .history-video-wrapper {
   display: flex;
-  padding: 4rem;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4rem;
 }
 
 .horizontal-card {
