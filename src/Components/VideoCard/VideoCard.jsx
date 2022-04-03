@@ -6,19 +6,25 @@ import { useLikedVideoContext } from "../../Context/LikedVideosContext";
 import { useAuthContext } from "../../Context/AuthContext";
 import {  useNavigate } from "react-router";
 import { useWatchLaterContext } from "../../Context/WatchLaterContext";
+import { useHistoryContext } from "../../Context/HistoryContext";
 
 const VideoCard = ({ eachVideo }) => {
   const { _id, title, description, thumbnail } = eachVideo;
 
   const { addToLikes } = useLikedVideoContext();
   const {addToWatchLater} = useWatchLaterContext();
+  const {addToHistory} = useHistoryContext();
   const { token } = useAuthContext();
   const navigate = useNavigate();
 
+  const singleVideoHandler = () => {
+    navigate(`/video/${_id}`)
+    addToHistory(eachVideo);
+  }
 
   return (
     <div className="shadow-card">
-      <div className="card-image">
+      <div className="card-image" onClick={() => singleVideoHandler()}>
         <img src={thumbnail} alt="card-image" />
       </div>
 
