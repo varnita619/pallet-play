@@ -6,68 +6,85 @@ import { FaVideo, FaHistory } from "react-icons/fa";
 import { RiPlayListAddFill } from "react-icons/ri";
 import { MdWatchLater } from "react-icons/md";
 import { useAuthContext } from "../../Context/AuthContext";
+import { useVideoContext } from "../../Context/VideoContext";
 
 function SideBar() {
-  const navLink = ({ activeLink }) => ({
-    borderBottom: activeLink ? ".2rem solid var(--secondary-color)" : "",
-  });
+  const { active } = useVideoContext();
+  console.log(active);
+
   const getActiveStyle = ({ isActive }) => ({
-    backgroundColor: isActive ? "var(--secondary-color)" : "",
+    className: isActive ? ".active" : "",
   });
+
   const { token } = useAuthContext();
   return (
     <div className="sidebar-div">
-      <div className="side-bar">
-        <NavLink to="/" style={navLink}>
-          <div className="side-list">
-            <h4 className="list-topic">
-              {" "}
-              <AiFillHome /> Home
-            </h4>
-          </div>
-        </NavLink>
-
-        <NavLink to="/videolisting" style={getActiveStyle}>
-          <div className="side-list">
-            <h4 className="list-topic">
-              {" "}
-              <FaVideo /> Explore
-            </h4>
-          </div>
-        </NavLink>
-
-        <NavLink to="/playlist" style={getActiveStyle}>
+      <div className={active ? "side-bar-active" : "side-bar"}>
         <div className="side-list">
           <h4 className="list-topic">
-            {" "}
-            <RiPlayListAddFill /> Playlist
+            <NavLink
+              to="/"
+              className={`({ isActive }) => (isActive ? "active" : "not-active") sidebar-icon`}
+            >
+              <AiFillHome className="sidebar-icon" /> Home
+            </NavLink>
           </h4>
         </div>
-        </NavLink>
 
-        <NavLink to="/likedvideos" className={navLink} style={getActiveStyle}>
-          <div className="side-list">
-            <h4 className="list-topic">
-              <AiFillLike /> Liked Videos
-            </h4>
-          </div>
-        </NavLink>
+        <div className="side-list">
+          <h4 className="list-topic">
+            <NavLink
+              to="/videolisting"
+              className={`({ isActive }) => (isActive ? "active" : "not-active") sidebar-icon`}
+            >
+              <FaVideo className="sidebar-icon" /> Explore
+            </NavLink>
+          </h4>
+        </div>
 
-        <NavLink to="/watchlater" className={navLink}>
-          <div className="side-list">
-            <h4 className="list-topic">
-              <MdWatchLater /> Watch Later
-            </h4>
-          </div>
-        </NavLink>
+        <div className="side-list">
+          <h4 className="list-topic">
+            <NavLink
+              to="/playlist"
+              className={`({ isActive }) => (isActive ? "active" : "not-active") sidebar-icon`}
+            >
+              <RiPlayListAddFill className="sidebar-icon" /> Playlist
+            </NavLink>
+          </h4>
+        </div>
 
-        <NavLink to="/history" className={navLink}>
-          <div className="side-list">
-            <h4 className="list-topic">
+        <div className="side-list">
+          <h4 className="list-topic">
+            <NavLink
+              to="/likedvideos"
+              className={`({ isActive }) => (isActive ? "active" : "not-active") sidebar-icon`}
+            >
+              <AiFillLike className="sidebar-icon" /> Liked Videos
+            </NavLink>
+          </h4>
+        </div>
+
+        <div className="side-list">
+          <h4 className="list-topic">
+            <NavLink
+              to="/watchlater"
+              className={`({ isActive }) => (isActive ? "active" : "not-active") sidebar-icon`}
+            >
+              <MdWatchLater className="sidebar-icon" /> Watch Later
+            </NavLink>
+          </h4>
+        </div>
+
+        <div className="side-list">
+          <h4 className="list-topic">
+            <NavLink
+              to="/history"
+              className={`({ isActive }) => (isActive ? "active" : "not-active") sidebar-icon`}
+            >
               <FaHistory /> History
-            </h4>
-          </div>
-        </NavLink>
+            </NavLink>
+          </h4>
+        </div>
       </div>
     </div>
   );

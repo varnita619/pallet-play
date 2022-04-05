@@ -31,7 +31,7 @@ const AllRoutes = () => {
         <Route path="/video/:videoId" element={<SingleVideo />}></Route>
         <Route path="/history" element={<History />}></Route>
         <Route path="/playlist" element={<Playlist />}></Route>
-        <Route path="/playlist:playlistId" element={<PlaylistVideo />}></Route>
+        <Route path="/playlist/:playlistId" element={<PlaylistVideo />}></Route>
       </Routes>
 
       <Toaster />
