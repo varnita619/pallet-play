@@ -47,7 +47,7 @@ function Login() {
   };
   return (
     <>
-      <form>
+      <form className="main-auth-container">
         <div className="auth-container">
           <div className="signup-container">
             <h1>Login</h1>
@@ -57,7 +57,7 @@ function Login() {
             </label>
             <input
               type="text"
-              placeholder="Enter Email"
+              placeholder="Enter Email - test@gmail.com"
               name="email"
               value={formData.email}
               onChange={(event) =>
@@ -75,7 +75,7 @@ function Login() {
             </label>
             <input
               type="password"
-              placeholder="*******"
+              placeholder="test123"
               name="psw"
               value={formData.password}
               onChange={(event) =>

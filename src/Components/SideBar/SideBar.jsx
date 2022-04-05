@@ -12,7 +12,7 @@ function SideBar() {
     borderBottom: activeLink ? ".2rem solid var(--secondary-color)" : "",
   });
   const getActiveStyle = ({ isActive }) => ({
-    backgroundColor: isActive ? "red" : "",
+    backgroundColor: isActive ? "var(--secondary-color)" : "",
   });
   const { token } = useAuthContext();
   return (
