@@ -10,11 +10,6 @@ import { useVideoContext } from "../../Context/VideoContext";
 
 function SideBar() {
   const { active } = useVideoContext();
-  console.log(active);
-
-  const getActiveStyle = ({ isActive }) => ({
-    className: isActive ? ".active" : "",
-  });
 
   const { token } = useAuthContext();
   return (

@@ -7,10 +7,15 @@ const PlaylistVideoCard = ({ eachVideo }) => {
   const { _id, title, description, thumbnail } = eachVideo;
   const { deleteEachVideo } = usePlaylistContext();
   const { playlistId}  = useParams();
+  const navigate = useNavigate(); 
 
+  const VideoHandler = () =>{
+    navigate(`/video/${_id}`)
+  }
+ 
   return (
     <div className="shadow-card" key={_id}>
-      <div className="card-image">
+      <div className="card-image" onClick={() => VideoHandler()}>
         <img src={thumbnail} alt="card-image" />
       </div>
 

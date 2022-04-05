@@ -18,17 +18,9 @@ const initialState = {
 const VideoContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(videoReducer, initialState);
   const { videos } = state;
+
   // for toggling sidebar
   const [active, setActive] = useState(false);
-  // const [width, setWidth] = useState(window.innerWidth);
-  // console.log(width, active)
-
-  // useEffect(()=>{
-  //   setWidth(window.innerWidth);
-  //   if(width < 967){
-  //     setActive(false);
-  //   }
-  // },[width])
 
   useEffect(() => {
     (async () => {
@@ -49,7 +41,9 @@ const VideoContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <VideoContext.Provider value={{ state, dispatch, videos, active, setActive }}>
+    <VideoContext.Provider
+      value={{ state, dispatch, videos, active, setActive }}
+    >
       {children}
     </VideoContext.Provider>
   );
