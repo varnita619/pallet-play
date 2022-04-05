@@ -15,23 +15,26 @@ const WatchLaterContextProvider = ({ children }) => {
   const { token } = useAuthContext();
   const { watchLater } = state;
 
-  const getWatchLaterData = async () => {
-    try {
-      const {
-        status,
-        data: { watchLater },
-      } = await axios.get("/api/user/watchLater", {
-        headers: { authorization: token },
-      });
-      if (status === 200) {
-        dispatch({ type: "GET_WATCH_LATER", payload: watchLater });
-      }
-    } catch (error) {
-      toast.error("Error occurred While fetching video from watchLater", {
-        position: "bottom-left",
-      });
-    }
-  };
+  useEffect(() => {
+    token &&
+      (async () => {
+        try {
+          const {
+            status,
+            data: { watchLater },
+          } = await axios.get("/api/user/watchLater", {
+            headers: { authorization: token },
+          });
+          if (status === 200) {
+            dispatch({ type: "GET_WATCH_LATER", payload: watchLater });
+          }
+        } catch (error) {
+          toast.error("Error occurred While fetching video from watchLater", {
+            position: "bottom-left",
+          });
+        }
+      })();
+  }, [token]);
 
   const addToWatchLater = async (video) => {
     if (watchLater.find((eachVideo) => eachVideo._id === video._id)) {
@@ -88,10 +91,6 @@ const WatchLaterContextProvider = ({ children }) => {
       }
     }
   };
-
-  useEffect(() => {
-    getWatchLaterData();
-  }, []);
 
   return (
     <WatchLaterContext.Provider

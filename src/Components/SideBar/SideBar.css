@@ -1,4 +1,4 @@
-.main-div{
+.sidebar-div{
   display: flex;
   border-right: 0.2rem solid var(--secondary-color);
 }

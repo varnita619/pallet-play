@@ -4,3 +4,5 @@ export { VideoCard } from "./VideoCard/VideoCard";
 export { VideoIframe } from "./VideoIframe/VideoIframe";
 export { WatchLaterCard } from "./WatchLaterCard/WatchLaterCard";
 export {HistoryCard} from "./HistoryCard/HistoryCard";
+export {PlaylistCard} from "./PlaylistCard/PlaylistCard";
+export {PlaylistVideoCard} from "./PlaylistVideoCard/PlaylistVideoCard";

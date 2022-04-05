@@ -16,7 +16,7 @@ function SideBar() {
   });
   const { token } = useAuthContext();
   return (
-    <div className="main-div">
+    <div className="sidebar-div">
       <div className="side-bar">
         <NavLink to="/" style={navLink}>
           <div className="side-list">
@@ -36,12 +36,14 @@ function SideBar() {
           </div>
         </NavLink>
 
+        <NavLink to="/playlist" style={getActiveStyle}>
         <div className="side-list">
           <h4 className="list-topic">
             {" "}
             <RiPlayListAddFill /> Playlist
           </h4>
         </div>
+        </NavLink>
 
         <NavLink to="/likedvideos" className={navLink} style={getActiveStyle}>
           <div className="side-list">

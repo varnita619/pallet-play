@@ -1,10 +1,6 @@
 .auth-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  color: var(--white-color);
+  background-color: var(--white-color);
+  width: max-content;
 }
 
 button:hover {
@@ -43,8 +39,8 @@ input[type="password"] {
   font-size: 1.1rem;
   margin-bottom: .5rem;
   background: transparent;
-  color: var(--white-color);
-  border-bottom: 2px solid var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  height: 2rem;
 }
 
 input[type="text"]:focus,
