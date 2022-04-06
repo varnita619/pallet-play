@@ -12,7 +12,7 @@ import { RiPlayListAddFill } from "react-icons/ri";
 import { usePlaylistContext } from "../../Context/PlaylistContext";
 
 const VideoCard = ({ eachVideo }) => {
-  const { _id, title, description, thumbnail } = eachVideo;
+  const { _id, title, description, thumbnail, categoryName } = eachVideo;
 
   const { addToLikes } = useLikedVideoContext();
   const { addToWatchLater } = useWatchLaterContext();
@@ -60,6 +60,7 @@ const VideoCard = ({ eachVideo }) => {
       <div className="shadow-card-details">
         <h4>{title}</h4>
         <p>{description}</p>
+        <p>{categoryName}</p>
       </div>
 
       <div className="twin-btn">

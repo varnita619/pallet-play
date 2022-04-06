@@ -76,7 +76,7 @@ function SideBar() {
               to="/history"
               className={`({ isActive }) => (isActive ? "active" : "not-active") sidebar-icon`}
             >
-              <FaHistory /> History
+              <FaHistory className="sidebar-icon" />  History
             </NavLink>
           </h4>
         </div>

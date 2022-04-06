@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
 .nav-bar {
   background-color: var(--primary-color);
   height: 6rem;
@@ -12,7 +12,7 @@
   width: 100%;
 }
 .heading-font {
-  font-family: "EB Garamond", serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .heading {
@@ -28,6 +28,8 @@
 
 .btn {
   background-color: var(--secondary-color);
+  border-radius: 5px;
+  padding: .7rem .8rem;
 }
 
 * {
@@ -64,6 +66,13 @@
   background: var(--hover-color);
 }
 
+.nav-bar_action-item-img{
+  background: transparent;
+  border-radius: 40px;
+  outline: none;
+  border-width: 0;
+}
+
 .nav-bar_action-item{
   background-color: var(--primary-color);
   color: var(--white-color);
@@ -73,5 +82,14 @@
 @media screen and (max-width: 967px) {
   .nav-bar_action-item{
     display: block;
+  }
+  .nav-bar_heading{
+    font-size: 1.1rem;
+  }
+  .sub-heading{
+    font-size: 1.1rem;
+  }
+  .search{
+    display: none;
   }
 }
