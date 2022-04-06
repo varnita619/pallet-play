@@ -29,7 +29,7 @@ const PlaylistContextProvider = ({ children }) => {
             dispatch({ type: "GET_PLAYLIST", payload: playlists });
           }
         } catch (error) {
-          toast.error("Some error occurred in playlist", {
+          toast.error("You need to login to access playlist", {
             position: "bottom-left",
           });
         }
