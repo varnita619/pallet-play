@@ -1,7 +1,6 @@
 import React from "react";
-import { WatchLaterCard } from "../../Components/WatchLaterCard/WatchLaterCard";
+import { WatchLaterCard, SideBar, NavBar } from "../../Components";
 import { useWatchLaterContext } from "../../Context/WatchLaterContext";
-import { SideBar } from "../../Components/SideBar/SideBar";
 
 function WatchLater() {
   const {
@@ -9,6 +8,8 @@ function WatchLater() {
   } = useWatchLaterContext();
 
   return (
+    <>
+    <NavBar/>
     <div className="main-container">
       <SideBar />
       <main className="videos-wrapper">
@@ -21,6 +22,7 @@ function WatchLater() {
         )}
       </main>
     </div>
+    </>
   );
 }
 

@@ -2,7 +2,7 @@ import React from "react";
 import "../LikedVideos/LikedVideos.css";
 import { MdDelete, MdWatchLater } from "react-icons/md";
 import { useLikedVideoContext } from "../../Context/LikedVideosContext";
-import { SideBar } from "../../Components/SideBar/SideBar";
+import { SideBar, NavBar } from "../../Components";
 
 const LikedVideos = () => {
   const {
@@ -11,6 +11,8 @@ const LikedVideos = () => {
   } = useLikedVideoContext();
 
   return (
+    <>
+    <NavBar />
     <div className="main-container">
       <SideBar />
       <div className="likes-wrapper">
@@ -44,6 +46,7 @@ const LikedVideos = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 

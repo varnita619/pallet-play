@@ -1,11 +1,9 @@
 import React from "react";
 import "../History/History.css";
-import { SideBar, HistoryCard } from "../../Components/index";
-import { useNavigate } from "react-router-dom";
+import { SideBar, HistoryCard, NavBar } from "../../Components";
 import { useHistoryContext } from "../../Context/HistoryContext";
 
 function History() {
-  const navigate = useNavigate();
 
   const {
     state: { history },
@@ -13,6 +11,8 @@ function History() {
   } = useHistoryContext();
 
   return (
+    <>
+    <NavBar />
     <div className="history-container">
       <SideBar />
 
@@ -27,6 +27,7 @@ function History() {
         <HistoryCard eachVideo={eachVideo} key={i} />
       ))}
     </div>
+    </>
   );
 }
 

@@ -23,7 +23,6 @@ const VideoContextProvider = ({ children }) => {
   const { videos, categoryName } = state;
   const getUniqueCategory = uniqueCategory(videos, "categoryName");
   const getFilterByCategory = filterByCategory(videos, categoryName);
-  console.log(getFilterByCategory)
 
   // for toggling sidebar
   const [active, setActive] = useState(false);

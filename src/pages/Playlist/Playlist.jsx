@@ -1,19 +1,15 @@
 import React from "react";
-import "./Playlist.css";
-import { SideBar } from "../../Components/SideBar/SideBar";
-import { PlaylistCard } from "../../Components/index";
+import { PlaylistCard, SideBar, NavBar } from "../../Components";
 import { usePlaylistContext } from "../../Context/PlaylistContext";
-import { useAuthContext } from "../../Context/AuthContext";
-import { useNavigate } from "react-router";
 
 function Playlist() {
-  const { token } = useAuthContext();
-  const navigate = useNavigate();
   const {
     state: { playlists },
   } = usePlaylistContext();
 
   return (
+    <>
+    <NavBar/>
     <div className="main-container">
       <SideBar />
       <main className="videos-wrapper">
@@ -26,6 +22,7 @@ function Playlist() {
         )}
       </main>
     </div>
+    </>
   );
 }
 

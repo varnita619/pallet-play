@@ -1,8 +1,7 @@
 import React from "react";
 import "../VideoListing/VideoListing.css";
-import { VideoCard } from "../../Components/VideoCard/VideoCard";
+import { VideoCard, SideBar, NavBar } from "../../Components";
 import { useVideoContext } from "../../Context/VideoContext";
-import { SideBar } from "../../Components/SideBar/SideBar";
 
 function VideoListing() {
   const {
@@ -12,6 +11,8 @@ function VideoListing() {
     getFilterByCategory,
   } = useVideoContext();
   return (
+    <>
+    <NavBar />
     <div className="main-container">
       <SideBar />
       <div className="categories-container">
@@ -54,6 +55,7 @@ function VideoListing() {
         </main>
       </div>
     </div>
+    </>
   );
 }
 

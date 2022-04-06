@@ -4,6 +4,7 @@ import "./Auth.css";
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import { TopBar } from "../../Components";
 
 function Signup() {
   const navigate = useNavigate();
@@ -17,7 +18,6 @@ function Signup() {
   const signUpFormHandler = (e) => {
     e.preventDefault();
     (async () => {
-
       try {
         const {
           status,
@@ -28,7 +28,9 @@ function Signup() {
           setFormData({ firstName: "", lastName: "", email: "", password: "" });
           if (encodedToken) {
             navigate("/login");
-            toast.success("Signed Up Successfully", { position: "bottom-left" });
+            toast.success("Signed Up Successfully", {
+              position: "bottom-left",
+            });
           }
         }
       } catch (error) {
@@ -39,6 +41,7 @@ function Signup() {
 
   return (
     <>
+      <TopBar />
       <form className="main-auth-container">
         <div className="auth-container">
           <div className="signup-container">

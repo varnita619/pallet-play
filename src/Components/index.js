@@ -6,3 +6,4 @@ export { WatchLaterCard } from "./WatchLaterCard/WatchLaterCard";
 export {HistoryCard} from "./HistoryCard/HistoryCard";
 export {PlaylistCard} from "./PlaylistCard/PlaylistCard";
 export {PlaylistVideoCard} from "./PlaylistVideoCard/PlaylistVideoCard";
+export {TopBar} from "./TopBar/TopBar";

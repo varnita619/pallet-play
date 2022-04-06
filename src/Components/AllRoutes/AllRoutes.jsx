@@ -14,12 +14,10 @@ import {
   Playlist,
   PlaylistVideo,
 } from "../../pages/index";
-import { NavBar } from "../../Components/index";
 
 const AllRoutes = () => {
   return (
     <div>
-      <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/videolisting" element={<VideoListing />}></Route>
