@@ -85,6 +85,8 @@ const VideoCard = ({ eachVideo }) => {
         </button>
       </div>
 
+      {/* Playlist Modal */}
+
       <div
         id="myModal"
         className="modal"
