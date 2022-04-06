@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./NavBar.css";
 import "../../CSS/Reset.css";
 import { useAuthContext } from "../../Context/AuthContext";
-import { useState } from "react";
 import { useVideoContext } from "../../Context/VideoContext";
 
-const NavBar = () => {
+const TopBar = () => {
   const { token, userLogout } = useAuthContext();
   const { setActive, active } = useVideoContext();
 
@@ -15,9 +13,6 @@ const NavBar = () => {
       <header className="nav-bar">
         <div className="nav-bar_row">
           <div className="nav-bar_section--align-start">
-            <button className="nav-bar_action-item" onClick={() => setActive(!active)}>
-              <i className="fas fa-bars"></i>
-            </button>
             <span className="nav-bar_heading heading heading-font">
               Pallet{" "}
             </span>
@@ -67,4 +62,4 @@ const NavBar = () => {
   );
 };
 
-export { NavBar };
+export { TopBar };

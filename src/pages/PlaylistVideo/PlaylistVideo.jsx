@@ -1,5 +1,5 @@
 import React from "react";
-import { SideBar, PlaylistVideoCard } from "../../Components/index";
+import { SideBar, PlaylistVideoCard, NavBar } from "../../Components";
 import { useParams } from "react-router-dom";
 import { usePlaylistContext } from "../../Context/PlaylistContext";
 
@@ -17,6 +17,8 @@ function PlaylistVideo() {
   console.log(getAllPlaylistVideo);
 
   return (
+    <>
+    <NavBar />
     <div className="main-container">
       <SideBar />
       <main className="videos-wrapper">
@@ -29,6 +31,7 @@ function PlaylistVideo() {
         )}
       </main>
     </div>
+    </>
   );
 }
 

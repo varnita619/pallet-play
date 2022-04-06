@@ -11,6 +11,7 @@ export const videos = [
     title: "Marty Music",
     thumbnail: thumbnail('VjAnb2gBFVI'),
     views: '6,456,90',
+    categoryName:'Rock',
     description:
       "Beginner electric guitar lesson",
     creator: "Soham Shah",
@@ -20,6 +21,7 @@ export const videos = [
     title: "Marty Music",
     thumbnail: thumbnail('RY3AvEGKfZ0'),
     views: '6,456,90',
+    categoryName:'Jazz',
     description:
       "Beginner electric guitar lesson",
     creator: "Soham Shah",
@@ -29,6 +31,7 @@ export const videos = [
     title: "Marty Music",
     thumbnail: thumbnail('3daYYn4AT3w'),
     views: '6,456,90',
+    categoryName:'Acoustic',
     description:
       "Beginner electric guitar lesson",
     creator: "Soham Shah",
@@ -38,6 +41,7 @@ export const videos = [
     title: "Marty Music",
     thumbnail: thumbnail('XctHeNixJDQ'),
     views: '6,456,90',
+    categoryName:'Rock',
     description:
       "Beginner electric guitar lesson",
     creator: "Soham Shah",
@@ -47,6 +51,7 @@ export const videos = [
     title: "Marty Music",
     thumbnail: thumbnail('7F0YVSBOBy8'),
     views: '6,456,90',
+    categoryName:'Acoustic',
     description:
       "Beginner electric guitar lesson",
     creator: "Soham Shah",
@@ -56,6 +61,7 @@ export const videos = [
     title: "Marty Music",
     thumbnail: thumbnail('cdkCB6czek8'),
     views: '6,456,90',
+    categoryName:'Rock',
     description:
       "Beginner electric guitar lesson",
     creator: "Soham Shah",
@@ -65,6 +71,7 @@ export const videos = [
     title: "Marty Music",
     thumbnail: thumbnail('Cda88AP_hjc'),
     views: '6,456,90',
+    categoryName:'Jazz',
     description:
       "Beginner electric guitar lesson",
     creator: "Soham Shah",
@@ -74,6 +81,7 @@ export const videos = [
     title: "Marty Music",
     thumbnail: thumbnail('SgXPhpDlZII'),
     views: '6,456,90',
+    categoryName:'Jazz',
     description:
       "Beginner electric guitar lesson",
     creator: "Soham Shah",
@@ -83,6 +91,7 @@ export const videos = [
     title: "Marty Music",
     thumbnail: thumbnail('w4a2ge9N31E'),
     views: '6,456,90',
+    categoryName:'Rock',
     description:
       "Beginner electric guitar lesson",
     creator: "Soham Shah",
@@ -92,6 +101,7 @@ export const videos = [
     title: "Marty Music",
     thumbnail: thumbnail('JiAD1-BR6FQ'),
     views: '6,456,90',
+    categoryName:'Acoustic',
     description:
       "Beginner electric guitar lesson",
     creator: "Markiee",
@@ -100,6 +110,7 @@ export const videos = [
     _id: "u2X7RLpsPBs",
     title: "Marty Music",
     creator: "Sentdex",
+    categoryName:'Acoustic',
     thumbnail: thumbnail('u2X7RLpsPBs'),
     views: '6,456,90',
     description:
@@ -109,6 +120,7 @@ export const videos = [
     _id: "R4sB_DSa8YQ",
     title: "Marty Music",
     creator: "Sentdex",
+    categoryName:'Jazz',
     thumbnail: thumbnail('R4sB_DSa8YQ'),
     views: '6,456,90',
     description:

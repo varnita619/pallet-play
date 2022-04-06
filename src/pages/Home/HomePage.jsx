@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./HomePage.css";
-
+import {TopBar} from "../../Components";
 const HomePage = () => {
   return (
+    <>
+    <TopBar />
     <div className="main-div">
       <div className="container">
         <img
@@ -23,6 +25,7 @@ const HomePage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

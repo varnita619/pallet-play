@@ -6,6 +6,7 @@ import axios from "axios";
 import { useAuthContext } from "../../Context/AuthContext";
 import { emailChecker } from "../../backend/utils/emailChecker";
 import { toast } from "react-hot-toast";
+import {TopBar} from "../../Components";
 
 function Login() {
   const navigate = useNavigate();
@@ -47,6 +48,7 @@ function Login() {
   };
   return (
     <>
+    <TopBar />
       <form className="main-auth-container">
         <div className="auth-container">
           <div className="signup-container">

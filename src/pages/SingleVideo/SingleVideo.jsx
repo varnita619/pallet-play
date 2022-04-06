@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../SingleVideo/SingleVideo.css";
-import { SideBar, VideoIframe } from "../../Components/index";
+import { SideBar, VideoIframe, NavBar } from "../../Components";
 import { useAuthContext } from "../../Context/AuthContext";
 import { AiOutlineLike } from "react-icons/ai";
 import { FcPlus } from "react-icons/fc";
@@ -51,6 +51,8 @@ function SingleVideo() {
   const video = videos.find((eachVideo) => eachVideo._id === videoId);
 
   return (
+    <>
+    <NavBar/>
     <div className="main-container">
       <SideBar />
       <main className="single-video-wrapper">
@@ -125,6 +127,7 @@ function SingleVideo() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
