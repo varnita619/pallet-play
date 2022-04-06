@@ -59,7 +59,7 @@ const PlaylistContextProvider = ({ children }) => {
           dispatch({ type: "CREATE_PLAYLIST", payload: playlists });
         }
       } catch (error) {
-        toast.error("Error occurred in  Create play list.", {
+        toast.error("Error occurred in creating playlist.", {
           position: "bottom-left",
         });
       }
@@ -89,7 +89,9 @@ const PlaylistContextProvider = ({ children }) => {
         });
       }
     } catch (error) {
-      console.log(error);
+      toast.error("Error occurred in adding to playlist.", {
+        position: "bottom-left",
+      });
     }
   };
 
@@ -107,7 +109,11 @@ const PlaylistContextProvider = ({ children }) => {
         toast.success("Playlist Deleted", { position: "bottom-left" });
         dispatch({ type: "DELETE_PLAYLIST", payload: playlists });
       }
-    } catch (error) {}
+    } catch (error) {
+      toast.error("Error occurred in deleting playlist.", {
+        position: "bottom-left",
+      });
+    }
   };
 
   //Delete Each video from particular playlist

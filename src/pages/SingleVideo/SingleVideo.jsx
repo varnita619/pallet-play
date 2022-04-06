@@ -52,81 +52,84 @@ function SingleVideo() {
 
   return (
     <>
-    <NavBar/>
-    <div className="main-container">
-      <SideBar />
-      <main className="single-video-wrapper">
-        <div className="video-player">
-          <VideoIframe videoId={video?._id} />
-        </div>
-        <div className="video-description">
-          <h4 className="video-player-title">{video?.title}</h4>
-          <h5 className="video-player-views"> {video?.description}</h5>
-          <span className="video-player-views">{video?.views} views</span>
-        </div>
-
-        <div className="action-btn-container">
-          <button
-            className="action-btn"
-            onClick={() => {
-              token ? addToLikes() : navigate("/login");
-            }}
-          >
-            <AiOutlineLike /> Like
-          </button>
-          <button
-            className="action-btn"
-            onClick={() => {
-              token ? addToWatchLater() : navigate("/login");
-            }}
-          >
-            <MdOutlineWatchLater /> Watch Later
-          </button>
-          <button className="action-btn" onClick={() => modalHandler()}>
-            <MdPlaylistAdd /> Playlist
-          </button>
-        </div>
-      </main>
-
-      {/* Playlist Modal */}
-      <div
-        id="myModal"
-        className="modal"
-        style={playlistModal ? { display: "flex" } : { display: "none" }}
-      >
-        <div className="modal-content">
-          <span className="close" onClick={() => setPlaylistModal(false)}>
-            &times;
-          </span>
-          <h5 className="model-heading">Playlist</h5>
-          <div className="model-subheading">
-            <div className="display-playlists">
-              {playlists?.map((eachPlaylist) => {
-                return (
-                  <button
-                    key={eachPlaylist._id}
-                    className="add-to-playlist-btn"
-                    onClick={() => addToPlaylist(eachPlaylist, video)}
-                  >
-                    <FcPlus className="add-icon" /> {eachPlaylist.title}
-                  </button>
-                );
-              })}
-            </div>
-            <input
-              type="text"
-              className="playlist-input"
-              onChange={(event) => playlistNameHandler(event)}
-            ></input>
+      <NavBar />
+      <div className="main-container">
+        <SideBar />
+        <main className="single-video-wrapper">
+          <div className="video-player">
+            <VideoIframe videoId={video?._id} />
           </div>
-          <div className="add-btn-container">
-            <button className="add-btn" onClick={() => playlistHandler()}>
-              Create Playlist
+          <div className="video-description">
+            <h4 className="video-player-title">{video?.title}</h4>
+            <h5 className="video-player-views"> {video?.description}</h5>
+            <span className="video-player-views">{video?.views} views</span>
+          </div>
+
+          <div className="action-btn-container">
+            <button
+              className="action-btn"
+              onClick={() => {
+                token ? addToLikes() : navigate("/login");
+              }}
+            >
+              <AiOutlineLike /> Like
             </button>
+            <button
+              className="action-btn"
+              onClick={() => {
+                token ? addToWatchLater() : navigate("/login");
+              }}
+            >
+              <MdOutlineWatchLater /> Watch Later
+            </button>
+            <button
+              className="action-btn"
+              onClick={() => (token ? modalHandler() : navigate("/login"))}
+            >
+              <MdPlaylistAdd /> Playlist
+            </button>
+          </div>
+        </main>
+
+        {/* Playlist Modal */}
+        <div
+          id="myModal"
+          className="modal"
+          style={playlistModal ? { display: "flex" } : { display: "none" }}
+        >
+          <div className="modal-content">
+            <span className="close" onClick={() => setPlaylistModal(false)}>
+              &times;
+            </span>
+            <h5 className="model-heading">Playlist</h5>
+            <div className="model-subheading">
+              <div className="display-playlists">
+                {playlists?.map((eachPlaylist) => {
+                  return (
+                    <button
+                      key={eachPlaylist._id}
+                      className="add-to-playlist-btn"
+                      onClick={() => addToPlaylist(eachPlaylist, video)}
+                    >
+                      <FcPlus className="add-icon" /> {eachPlaylist.title}
+                    </button>
+                  );
+                })}
+              </div>
+              <input
+                type="text"
+                className="playlist-input"
+                onChange={(event) => playlistNameHandler(event)}
+              ></input>
+            </div>
+            <div className="add-btn-container">
+              <button className="add-btn" onClick={() => playlistHandler()}>
+                Create Playlist
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </>
   );
 }

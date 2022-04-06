@@ -34,29 +34,25 @@ const HistoryContextProvider = ({ children }) => {
   });
 
   const addToHistory = async (video) => {
-    if (history.find((eachVideo) => eachVideo._id === video._id)) {
-      removeFromHistory(video._id);
-    } else {
-      try {
-        const {
-          status,
-          data: { history },
-        } = await axios.post(
-          "/api/user/history",
-          { video },
-          {
-            headers: { authorization: token },
-          }
-        );
-        if (status === 201) {
-          dispatch({
-            type: "ADD_TO_HISTORY",
-            payload: history,
-          });
+    try {
+      const {
+        status,
+        data: { history },
+      } = await axios.post(
+        "/api/user/history",
+        { video },
+        {
+          headers: { authorization: token },
         }
-      } catch (error) {
-        console.log(error);
+      );
+      if (status === 201) {
+        dispatch({
+          type: "ADD_TO_HISTORY",
+          payload: history,
+        });
       }
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -101,7 +97,7 @@ const HistoryContextProvider = ({ children }) => {
           dispatch({ type: "CLEAR_HISTORY", payload: history });
         }
       } catch (error) {
-        console.log(error);
+        toast.error("Error occured in clearing history! You need to login to use this", { position: "bottom-left" });
       }
     }
   };

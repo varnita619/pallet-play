@@ -81,7 +81,7 @@ const VideoCard = ({ eachVideo }) => {
           <MdWatchLater />
         </button>
 
-        <button className="video-action-btn" onClick={() => modalHandler()}>
+        <button className="video-action-btn" onClick={() => token ? modalHandler() : navigate('/login')}>
           <RiPlayListAddFill />
         </button>
       </div>
