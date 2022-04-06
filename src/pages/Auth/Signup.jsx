@@ -39,7 +39,7 @@ function Signup() {
 
   return (
     <>
-      <form>
+      <form className="main-auth-container">
         <div className="auth-container">
           <div className="signup-container">
             <h1>Sign Up</h1>

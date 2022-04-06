@@ -1,10 +1,12 @@
-.auth-container {
+.main-auth-container{
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  color: var(--white-color);
+  margin-top: 5rem;
+}
+
+.auth-container {
+  background-color: var(--white-color);
+  width: max-content;
 }
 
 button:hover {
@@ -43,8 +45,8 @@ input[type="password"] {
   font-size: 1.1rem;
   margin-bottom: .5rem;
   background: transparent;
-  color: var(--white-color);
-  border-bottom: 2px solid var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  height: 2rem;
 }
 
 input[type="text"]:focus,
@@ -94,6 +96,16 @@ hr {
 .have-account > a {
   color: var(--secondary-color);
   text-decoration: none;
+}
+
+.log-btn{
+  background-color: var(--secondary-color);
+  margin: 1rem 0;
+  border: none;
+  cursor: pointer;
+  width: 8rem;
+  opacity: 0.9;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 /* Change styles for cancel button and signup button on extra small screens */

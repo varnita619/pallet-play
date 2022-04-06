@@ -63,3 +63,15 @@
 .search-btn:hover {
   background: var(--hover-color);
 }
+
+.nav-bar_action-item{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  display: none;
+}
+
+@media screen and (max-width: 967px) {
+  .nav-bar_action-item{
+    display: block;
+  }
+}

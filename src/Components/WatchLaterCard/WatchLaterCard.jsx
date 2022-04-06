@@ -27,7 +27,7 @@ const WatchLaterCard = ({ eachVideo }) => {
 
       <div className="twin-btn">
         <button
-          className="like-btn"
+          className="video-action-btn"
           onClick={() => {
             token ? addToLikes(eachVideo) : navigate("/login");
           }}
@@ -35,7 +35,7 @@ const WatchLaterCard = ({ eachVideo }) => {
           <AiFillLike />
         </button>
         <button
-          className="like-btn"
+          className="video-action-btn"
           onClick={() => {
             token ? removeFromWatchLater(eachVideo) : navigate("/login");
           }}

@@ -15,21 +15,23 @@ const HistoryContextProvider = ({ children }) => {
   const { token } = useAuthContext();
   const { history } = state;
 
-  const getHistoryData = async () => {
-    try {
-      const {
-        status,
-        data: { history },
-      } = await axios.get("/api/user/history", {
-        headers: { authorization: token },
-      });
-      if (status === 200) {
-        dispatch({ type: "GET_HISTORY", payload: history });
+  useEffect(() => {
+    (async () => {
+      try {
+        const {
+          status,
+          data: { history },
+        } = await axios.get("/api/user/history", {
+          headers: { authorization: token },
+        });
+        if (status === 200) {
+          dispatch({ type: "GET_HISTORY", payload: history });
+        }
+      } catch (error) {
+        console.log(error);
       }
-    } catch (error) {
-      console.log(error);
-    }
-  };
+    })();
+  });
 
   const addToHistory = async (video) => {
     if (history.find((eachVideo) => eachVideo._id === video._id)) {
@@ -60,27 +62,27 @@ const HistoryContextProvider = ({ children }) => {
 
   const removeFromHistory = async (videoId) => {
     if (history.find((eachVideo) => eachVideo._id === videoId)) {
-    try {
-      const {
-        status,
-        data: { history },
-      } = await axios.delete(`/api/user/history/${videoId}`, {
-        headers: { authorization: token },
-      });
-     
-      if (status === 200) {
-        toast.success("Removed from history", {
-          position: "bottom-left",
+      try {
+        const {
+          status,
+          data: { history },
+        } = await axios.delete(`/api/user/history/${videoId}`, {
+          headers: { authorization: token },
         });
-        dispatch({
-          type: "REMOVE_FROM_HISTORY",
-          payload: history,
-        });
+
+        if (status === 200) {
+          toast.success("Removed from history", {
+            position: "bottom-left",
+          });
+          dispatch({
+            type: "REMOVE_FROM_HISTORY",
+            payload: history,
+          });
+        }
+      } catch (error) {
+        toast.error("Error occured in removing!", { position: "bottom-left" });
       }
-    } catch (error) {
-      toast.error("Error occured in removing!", { position: "bottom-left" });
     }
-  }
   };
 
   const clearHistory = async () => {
@@ -103,10 +105,6 @@ const HistoryContextProvider = ({ children }) => {
       }
     }
   };
-
-  useEffect(() => {
-    getHistoryData();
-  }, []);
 
   return (
     <HistoryContext.Provider

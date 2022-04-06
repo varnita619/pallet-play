@@ -15,14 +15,59 @@
     padding: .5rem;
 }
 
-.like-btn{
+.video-action-btn{
     justify-content: flex-end;
     align-items: flex-end;
     text-align: end;
     background: transparent;
     color: var(--white-color);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     border: none;
     margin-right: 1rem;
 
+}
+
+.modal{
+    background-color: var(--overlay-color);
+    color: var(--text-black);
+    padding: 0;
+}
+
+.playlist-input [type='text']{
+    color: var(--text-black);
+    border: 1px solid var(--text-black);
+
+}
+
+.modal-heading{
+    background-color: var(--text-black);
+}
+
+.add-btn{
+    background-color: var(--secondary-color);
+    padding: .2rem;
+    color: var(--white-color);
+    text-align: center;
+    border-radius: 3rem;
+}
+
+.display-playlists{
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: .2rem;
+    overflow-y: scroll;
+}
+
+.add-to-playlist-btn{
+    border: none ;
+    background: transparent;
+    font-size: 1.2rem;
+}
+
+.add-icon{
+    fill: var(--secondary-color);
+    border-radius: 3rem;
+    font-size: .9rem;
 }

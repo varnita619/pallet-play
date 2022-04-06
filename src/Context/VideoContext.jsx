@@ -1,4 +1,10 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useReducer,
+  useState,
+} from "react";
 import axios from "axios";
 import { videoReducer } from "../Reducer/videoReducer";
 import { toast } from "react-hot-toast";
@@ -10,6 +16,12 @@ const initialState = {
 };
 
 const VideoContextProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(videoReducer, initialState);
+  const { videos } = state;
+
+  // for toggling sidebar
+  const [active, setActive] = useState(false);
+
   useEffect(() => {
     (async () => {
       try {
@@ -21,16 +33,17 @@ const VideoContextProvider = ({ children }) => {
           payload: videos,
         });
       } catch (error) {
-        toast.error("Error occurred in fetching videos " , { position: "bottom-left"});
+        toast.error("Error occurred in fetching videos ", {
+          position: "bottom-left",
+        });
       }
     })();
   }, []);
 
-  const [state, dispatch] = useReducer(videoReducer, initialState);
-  const { videos } = state;
-
   return (
-    <VideoContext.Provider value={{ state, dispatch, videos }}>
+    <VideoContext.Provider
+      value={{ state, dispatch, videos, active, setActive }}
+    >
       {children}
     </VideoContext.Provider>
   );

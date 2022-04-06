@@ -11,6 +11,8 @@ import {
   Signup,
   WatchLater,
   History,
+  Playlist,
+  PlaylistVideo,
 } from "../../pages/index";
 import { NavBar } from "../../Components/index";
 
@@ -28,6 +30,8 @@ const AllRoutes = () => {
         <Route path="/watchlater" element={<WatchLater />}></Route>
         <Route path="/video/:videoId" element={<SingleVideo />}></Route>
         <Route path="/history" element={<History />}></Route>
+        <Route path="/playlist" element={<Playlist />}></Route>
+        <Route path="/playlist/:playlistId" element={<PlaylistVideo />}></Route>
       </Routes>
 
       <Toaster />

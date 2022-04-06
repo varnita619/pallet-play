@@ -30,12 +30,12 @@ const LikedVideos = () => {
 
               <div className="twin-btn">
                 <button
-                  className="like-btn"
+                  className="video-action-btn"
                   onClick={() => removeFromLikes(eachVideo._id)}
                 >
                   <MdDelete />
                 </button>
-                <button className="like-btn">
+                <button className="video-action-btn">
                   <MdWatchLater />
                 </button>
               </div>
