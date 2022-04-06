@@ -1,18 +1,16 @@
 .sidebar-div {
-  display: flex;
   border-right: 0.2rem solid var(--secondary-color);
 }
 
 .side-bar {
-  margin-left: 2rem;
+  margin-left: 1rem;
   position: sticky;
-  top: 8rem;
+  top: 5rem;
   bottom: 0;
   cursor: pointer;
-  height: 94vh;
+  height: 95vh;
   overflow-y: auto;
   width: 11rem;
-  z-index: 1;
 }
 
 .side-list {
@@ -33,7 +31,7 @@
 
 .sidebar-icon{
   color: var(--white-color);
-  padding-right: .2rem;
+  margin-right: .5rem;
   text-decoration: none;
 }
 
@@ -50,12 +48,12 @@
   }
 
   .side-bar-active{
-    margin-left: 2rem;
+    margin-left: 1rem;
     position: sticky;
-    top: 8rem;
+    top: 5rem;
     bottom: 0;
     cursor: pointer;
-    height: 94vh;
+    height: 95vh;
     overflow-y: auto;
     width: 11rem;
     z-index: 1;

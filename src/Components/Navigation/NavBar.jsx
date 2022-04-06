@@ -52,7 +52,7 @@ const NavBar = () => {
                 </Link>
               )}
             </button>
-            <button className="nav-bar_action-item">
+            <button className="nav-bar_action-item-img">
               {token && (
                 <img
                   src="https://images.unsplash.com/photo-1543132220-3ec99c6094dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDZ8fHByb2ZpbGV8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"

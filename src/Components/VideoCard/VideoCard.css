@@ -1,11 +1,9 @@
 .shadow-card{
     background-color: transparent;
     color: var(--white-color);
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: flex-end;
+    justify-content: flex-end;
     text-align: start;
-    margin-right: 3rem;
-    margin-bottom: 2rem;
 }
 
 .twin-btn{

@@ -5,12 +5,17 @@ import { useVideoContext } from "../../Context/VideoContext";
 import { SideBar } from "../../Components/SideBar/SideBar";
 
 function VideoListing() {
-  const { dispatch, state: {categoryName}, getUniqueCategory, getFilterByCategory  } = useVideoContext();
+  const {
+    dispatch,
+    state: { categoryName },
+    getUniqueCategory,
+    getFilterByCategory,
+  } = useVideoContext();
   return (
     <div className="main-container">
       <SideBar />
-
-      <div className="categories-wrapper">
+      <div className="categories-container">
+        <div className="categories-wrapper">
           <ul>
             <button
               className={
@@ -37,16 +42,17 @@ function VideoListing() {
               >
                 {eachCategory}
               </button>
-             ))} 
+            ))}
           </ul>
         </div>
 
         {/* Video Listing Cards */}
-      <main className="videos-wrapper">
-        {getFilterByCategory.map((eachVideo) => {
-          return <VideoCard eachVideo={eachVideo} key={eachVideo._id} />;
-        })}
-      </main>
+        <main className="videos-wrapper">
+          {getFilterByCategory.map((eachVideo) => {
+            return <VideoCard eachVideo={eachVideo} key={eachVideo._id} />;
+          })}
+        </main>
+      </div>
     </div>
   );
 }
