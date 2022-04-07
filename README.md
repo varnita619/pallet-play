@@ -30,6 +30,7 @@ This folder contains the Mock Backend created for Video-Library App. It contains
 - Delete PlayList
 - Remove single video from PlayList
 - Authentication
+- Toast to display messages
 
 ## Screen Shots
 
